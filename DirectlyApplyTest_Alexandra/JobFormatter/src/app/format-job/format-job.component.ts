@@ -26,8 +26,9 @@ export class FormatJobComponent implements OnInit {
 
   formatJob(){
     if (this.rawJob.title == '' || this.rawJob.rawDescription ==''){
-      this.warning=true; // show warning if empty fields
+      this.warning = true; // show warning if empty fields
     } else {
+      this.warning = false;
       this.submitJob = true
       this.jobTitle = this.rawJob.title;
 
