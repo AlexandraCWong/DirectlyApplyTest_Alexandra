@@ -1,0 +1,27 @@
+
+<div class="inputContainer">
+    <form>
+        <div class="form-group" style="padding-left: 20px; padding-top: 20px;">
+            <label for="jobTitle">Job Title</label><br>
+            <input type="text" name="text_name" class="jobTitleField" [(ngModel)]="rawJob.title"/>
+        </div>
+        <pre></pre>
+        <div class="form-group" style="padding-left: 20px;">
+            <label for="jobDescription">Raw Job Description</label><br>
+            <textarea name="paragraph_text" cols="50" rows="10" class="rawTextField" [(ngModel)]="rawJob.rawDescription"></textarea>
+        </div>
+        <pre></pre> 
+        <div style="text-align:right; padding-right: 25px;">
+            <button class="button1" (click)="formatJob()">Format Job</button>
+        </div>
+        <div style="text-align:right; padding-right: 25px; padding-top: 10px;">
+            <button class="button2" (click)="Reset()">Reset</button>
+        </div>
+    </form>
+  </div>
+  
+
+
+<div *ngIf="submitJob === true" class="outputContainer" style="white-space: pre-wrap;">
+    <h2>{{jobTitle}}</h2>
+    <h4>{{description}}</h4>
